@@ -29,9 +29,10 @@ define(function(require, exports, module) {
                 if (url == "") {
                     return; }
                 // 页头
+                debugger;
                 $('#' + moduleName + '  .page-name').text(name);
                 // 1
-                url = url + ".html?d=" + new Date();
+                url = url + ".html"; // ?d=+ new Date();
 
                 var $content = $('#' + moduleName + '  .page-content');
                 $content.html("正在加载...");

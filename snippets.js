@@ -7,7 +7,7 @@
 define(function (require, exports, module) {
 
     var loadData = require('treeList');
-    var baseUrl = '/projects/labroom/snippets/';
+    var baseUrl = 'snippets/';
     var moduleName = 'snippets';
     var id = "xxx";
     var data = [

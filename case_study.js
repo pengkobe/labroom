@@ -6,7 +6,7 @@
 ;
 define(function(require, exports, module) {
     var loadData = require('treeList');
-    var baseUrl = '/projects/labroom/case_study/';
+    var baseUrl = 'case_study/';
     var moduleName = 'case_study';
     var id = "xxx11";
 

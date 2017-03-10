@@ -7,7 +7,7 @@
 define(function(require, exports, module) {
 
     var loadData = require('treeList');
-    var baseUrl = '/projects/labroom/raphelchart/';
+    var baseUrl = 'raphelchart/';
     var moduleName = 'raphelchart';
     var id = "xxx";
 

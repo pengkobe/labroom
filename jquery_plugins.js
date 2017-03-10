@@ -6,7 +6,7 @@
 ;
 define(function(require, exports, module) {
     var loadData = require('treeList');
-    var baseUrl = '/projects/labroom/jquery_plugins/';
+    var baseUrl = 'jquery_plugins/';
     var moduleName = 'jquery_plugins';
     var id = "xxx1111";
 
