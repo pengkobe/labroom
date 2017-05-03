@@ -1,0 +1,54 @@
+<pre><code class="hljs javascript">
+var http = require('http');    
+var sha1=require('sha1');  
+var qs = require('querystring');   
+var Appkey='9060757f46b0dad794f7ae5be5f52214';  
+var Nonce="ws123";  
+var CurTime=new Date().getTime();  
+var AppSecret='xxxx';  
+var str=AppSecret + Nonce + CurTime;  
+var CheckSum=sha1(str);  
+  
+     
+var post_data = {    
+  mobile: '18390840270',
+    templateid: 3056170,
+    codeLen: 4
+};//这是需要提交的数据    
+     
+     
+var content = qs.stringify(post_data);   
+   console.log(content)  
+var options = {    
+    hostname: 'api.netease.im',    
+    //port:443,  
+    path: '/sms/sendcode.action',    
+    method: 'POST',    
+    headers: {    
+        'AppKey'        : Appkey,  
+        'Nonce'         : Nonce,  
+        'CurTime'       : CurTime,  
+        'CheckSum'      : CheckSum,  
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',  
+              
+    }    
+};    
+     
+var req = http.request(options, function (res) {    
+    console.log('STATUS: ' + res.statusCode);    
+    //console.log('HEADERS: '+res.headers);    
+    res.setEncoding('utf8');    
+    res.on('data', function (chunk) {    
+        console.log('BODY: ' + chunk);    
+    });    
+});    
+     
+req.on('error', function (e) {    
+    console.log('problem with request: ' + e.message);    
+});    
+     
+// write data to request body    
+req.write(content);    
+     
+req.end();  
+</code></pre>

@@ -20,7 +20,7 @@ define(function (require, exports, module) {
         { level: 2, itemCode: 7, itemName: 'js_position_element', pCode: 1, url: baseUrl + 'js_position_element' },
         { level: 2, itemCode: 8, itemName: 'node_upload_file', pCode: 1, url: baseUrl + 'node_upload_file' },
         { level: 2, itemCode: 9, itemName: 'node_regex_crawler', pCode: 1, url: baseUrl + 'node_regex_crawler' },
-
+        { level: 2, itemCode: 10, itemName: 'node_requst_apidata', pCode: 1, url: baseUrl + 'node_requst_apidata' },
     ];
     loadData(moduleName, id, data);
 });
